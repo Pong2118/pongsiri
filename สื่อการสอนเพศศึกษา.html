@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพศศึกษา ม.2 - สื่อการสอนbyครูหน่อง</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #ff7f00 0%, #ff4500 100%);
+        }
+        .card-shadow {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .quiz-option {
+            transition: all 0.3s ease;
+        }
+        .quiz-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        .correct {
+            background-color: #10b981 !important;
+            color: white !important;
+        }
+        .incorrect {
+            background-color: #ef4444 !important;
+            color: white !important;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-full bg-gray-100">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl font-bold mb-2">🧠 เพศศึกษา ชั้น ม.2</h1>
+            <p class="text-xl opacity-90">เรียนรู้เรื่องการเปลี่ยนแปลงของร่างกายและจิตใจ</p>
+            <p class="text-sm opacity-75 mt-2">โดย นายพงศศ์ศิริ ชมภูพื้น</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="bg-black text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-8">
+                <button onclick="showSection('content')" class="nav-btn px-6 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 transition-colors">
+                    📚 เนื้อหา
+                </button>
+                <button onclick="showSection('quiz')" class="nav-btn px-6 py-2 rounded-lg bg-orange-600 hover:bg-orange-700 transition-colors">
+                    🎮 เกมตอบคำถาม
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <section id="content" class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-xl card-shadow p-8 mb-8">
+                <h2 class="text-3xl font-bold text-orange-600 mb-6 text-center">🌱 การเปลี่ยนแปลงในวัยรุ่น</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Physical Changes -->
+                    <div class="bg-orange-50 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold text-black mb-4">💪 การเปลี่ยนแปลงทางร่างกาย</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>ส่วนสูงและน้ำหนักเพิ่มขึ้นอย่างรวดเร็ว</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>เสียงเปลี่ยน (โดยเฉพาะเพศชาย)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>ขนขึ้นตามส่วนต่างๆ ของร่างกาย</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>อวัยวะเพศเจริญเติบโต</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>ผิวหนังมีความมันมากขึ้น</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Emotional Changes -->
+                    <div class="bg-gray-50 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold text-black mb-4">❤️ การเปลี่ยนแปลงทางอารมณ์</h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>อารมณ์เปลี่ยนแปลงง่าย</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>เริ่มสนใจเพศตรงข้าม</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>ต้องการความเป็นส่วนตัว</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>ค้นหาตัวตนและความเป็นอิสระ</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-orange-500 mr-2">•</span>
+                                <span>ให้ความสำคัญกับเพื่อนมากขึ้น</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="bg-white rounded-xl card-shadow p-8">
+                <h2 class="text-3xl font-bold text-orange-600 mb-6 text-center">💡 คำแนะนำสำหรับวัยรุ่น</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="text-center p-4 bg-orange-50 rounded-lg">
+                        <div class="text-4xl mb-3">🧘‍♀️</div>
+                        <h4 class="font-semibold text-black mb-2">ดูแลสุขภาพจิต</h4>
+                        <p class="text-gray-600 text-sm">พูดคุยกับผู้ใหญ่ที่ไว้ใจได้เมื่อมีปัญหา</p>
+                    </div>
+                    <div class="text-center p-4 bg-gray-50 rounded-lg">
+                        <div class="text-4xl mb-3">🏃‍♂️</div>
+                        <h4 class="font-semibold text-black mb-2">ออกกำลังกาย</h4>
+                        <p class="text-gray-600 text-sm">ช่วยให้ร่างกายแข็งแรงและจิตใจดี</p>
+                    </div>
+                    <div class="text-center p-4 bg-orange-50 rounded-lg">
+                        <div class="text-4xl mb-3">🥗</div>
+                        <h4 class="font-semibold text-black mb-2">กินอาหารดี</h4>
+                        <p class="text-gray-600 text-sm">เลือกอาหารที่มีประโยชน์ต่อการเจริญเติบโต</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="container mx-auto px-4 py-8 hidden">
+        <div class="max-w-3xl mx-auto">
+            <div class="bg-white rounded-xl card-shadow p-8">
+                <h2 class="text-3xl font-bold text-orange-600 mb-6 text-center">🎮 เกมตอบคำถาม</h2>
+                
+                <div id="quiz-container">
+                    <div id="question-container" class="mb-8">
+                        <div class="bg-black text-white p-4 rounded-lg mb-6">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-orange-400 font-semibold">คำถามที่ <span id="question-number">1</span>/5</span>
+                                <span class="text-orange-400 font-semibold">คะแนน: <span id="score">0</span></span>
+                            </div>
+                            <h3 id="question-text" class="text-xl font-semibold"></h3>
+                        </div>
+                        
+                        <div id="options-container" class="space-y-3">
+                            <!-- Options will be inserted here -->
+                        </div>
+                        
+                        <div id="feedback" class="mt-6 p-4 rounded-lg hidden">
+                            <p id="feedback-text" class="font-semibold"></p>
+                            <p id="explanation" class="mt-2 text-sm"></p>
+                        </div>
+                        
+                        <button id="next-btn" class="mt-6 px-8 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors hidden">
+                            ถัดไป
+                        </button>
+                    </div>
+                    
+                    <div id="results" class="text-center hidden">
+                        <div class="bg-gradient-to-r from-orange-400 to-orange-600 text-white p-8 rounded-xl">
+                            <h3 class="text-3xl font-bold mb-4">🎉 เสร็จสิ้น!</h3>
+                            <p class="text-xl mb-4">คะแนนของคุณ: <span id="final-score" class="font-bold"></span>/5</p>
+                            <p id="performance-message" class="text-lg mb-6"></p>
+                            <button onclick="restartQuiz()" class="px-8 py-3 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
+                                เล่นอีกครั้ง
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- About Section -->
+                <div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">📚 เกี่ยวกับสื่อการสอน</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-3">
+                        สื่อการสอนเพศศึกษาสำหรับนักเรียนชั้นมัธยมศึกษาปีที่ 2 
+                        เพื่อให้ความรู้ที่ถูกต้องเกี่ยวกับการเปลี่ยนแปลงในวัยรุ่น
+                    </p>
+                    <div class="bg-orange-900 p-3 rounded-lg">
+                        <p class="text-orange-200 text-sm font-semibold">👨‍🏫 ผู้สร้าง</p>
+                        <p class="text-white font-bold">นายพงศศ์ศิริ ชมภูพื้น</p>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">🔗 เมนูหลัก</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <button onclick="showSection('content')" class="text-gray-300 hover:text-orange-400 transition-colors text-sm flex items-center">
+                                <span class="mr-2">📖</span> เนื้อหาบทเรียน
+                            </button>
+                        </li>
+                        <li>
+                            <button onclick="showSection('quiz')" class="text-gray-300 hover:text-orange-400 transition-colors text-sm flex items-center">
+                                <span class="mr-2">🎮</span> เกมตอบคำถาม
+                            </button>
+                        </li>
+                        <li class="pt-2">
+                            <div class="text-gray-400 text-xs">
+                                <p>📅 สร้างเมื่อ: 2024</p>
+                                <p>🎯 เหมาะสำหรับ: ม.2</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tips Section -->
+                <div>
+                    <h3 class="text-xl font-bold text-orange-400 mb-4">💡 เคล็ดลับการใช้งาน</h3>
+                    <ul class="space-y-2 text-gray-300 text-sm">
+                        <li class="flex items-start">
+                            <span class="text-orange-400 mr-2">•</span>
+                            <span>อ่านเนื้อหาก่อนทำแบบทดสอบ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-orange-400 mr-2">•</span>
+                            <span>ทำแบบทดสอบได้หลายครั้ง</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-orange-400 mr-2">•</span>
+                            <span>อ่านคำอธิบายเฉลยทุกข้อ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-orange-400 mr-2">•</span>
+                            <span>ถามครูเมื่อมีข้อสงสัย</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-700 mt-8 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <p class="text-gray-400 text-sm">
+                            © 2024 สื่อการสอนเพศศึกษา ม.2 | สร้างด้วยความใส่ใจ
+                        </p>
+                        <p class="text-orange-300 text-xs mt-1">
+                            โดย นายพงศศ์ศิริ ชมภูพื้น | เพื่อการศึกษาที่มีคุณภาพ
+                        </p>
+                    </div>
+                    <div class="flex space-x-4">
+                        <span class="text-orange-400 text-2xl" title="ความรู้">🧠</span>
+                        <span class="text-orange-400 text-2xl" title="การศึกษา">📚</span>
+                        <span class="text-orange-400 text-2xl" title="เป้าหมาย">🎯</span>
+                        <span class="text-orange-400 text-2xl" title="ความสำเร็จ">⭐</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const questions = [
+            {
+                question: "การเปลี่ยนแปลงใดต่อไปนี้เป็นการเปลี่ยนแปลงทางร่างกายในวัยรุ่น?",
+                options: ["ส่วนสูงเพิ่มขึ้นอย่างรวดเร็ว", "ชอบเล่นเกม", "เรียนเก่งขึ้น", "นอนดึกขึ้น"],
+                correct: 0,
+                explanation: "ส่วนสูงเพิ่มขึ้นอย่างรวดเร็วเป็นการเปลี่ยนแปลงทางร่างกายที่สำคัญในวัยรุ่น เนื่องจากฮอร์โมนการเจริญเติบโต"
+            },
+            {
+                question: "อะไรคือสาเหตุหลักของการเปลี่ยนแปลงในวัยรุ่น?",
+                options: ["การเรียนหนัก", "ฮอร์โมน", "อากาศร้อน", "การดูโทรทัศน์"],
+                correct: 1,
+                explanation: "ฮอร์โมนเป็นสาเหตุหลักของการเปลี่ยนแปลงทั้งทางร่างกายและจิตใจในวัยรุ่น โดยเฉพาะฮอร์โมนเพศ"
+            },
+            {
+                question: "การเปลี่ยนแปลงทางอารมณ์ในวัยรุ่นมีลักษณะอย่างไร?",
+                options: ["อารมณ์คงที่", "อารมณ์เปลี่ยนแปลงง่าย", "ไม่มีอารมณ์", "อารมณ์ดีตลอดเวลา"],
+                correct: 1,
+                explanation: "วัยรุ่นมักมีอารมณ์เปลี่ยนแปลงง่ายเนื่องจากการเปลี่ยนแปลงของฮอร์โมนและการปรับตัวทางสังคม"
+            },
+            {
+                question: "วิธีใดต่อไปนี้ช่วยดูแลสุขภาพจิตในวัยรุ่นได้ดี?",
+                options: ["เก็บปัญหาไว้คนเดียว", "พูดคุยกับผู้ใหญ่ที่ไว้ใจได้", "หลีกเลี่ยงเพื่อน", "นอนน้อย"],
+                correct: 1,
+                explanation: "การพูดคุยกับผู้ใหญ่ที่ไว้ใจได้จะช่วยให้วัยรุ่นจัดการกับปัญหาและความเครียดได้ดีขึ้น"
+            },
+            {
+                question: "การออกกำลังกายมีประโยชน์อย่างไรต่อวัยรุ่น?",
+                options: ["ทำให้เหนื่อย", "ช่วยให้ร่างกายแข็งแรงและจิตใจดี", "เสียเวลา", "ทำให้หิว"],
+                correct: 1,
+                explanation: "การออกกำลังกายช่วยให้ร่างกายแข็งแรง ลดความเครียด ปล่อยฮอร์โมนความสุข และทำให้จิตใจแจ่มใส"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let answered = false;
+
+        function showSection(section) {
+            document.getElementById('content').classList.add('hidden');
+            document.getElementById('quiz').classList.add('hidden');
+            document.getElementById(section).classList.remove('hidden');
+            
+            if (section === 'quiz') {
+                restartQuiz();
+            }
+        }
+
+        function loadQuestion() {
+            const question = questions[currentQuestion];
+            document.getElementById('question-number').textContent = currentQuestion + 1;
+            document.getElementById('question-text').textContent = question.question;
+            document.getElementById('score').textContent = score;
+            
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const button = document.createElement('button');
+                button.className = 'quiz-option w-full p-4 text-left bg-gray-100 hover:bg-gray-200 rounded-lg border-2 border-transparent';
+                button.textContent = `${String.fromCharCode(65 + index)}. ${option}`;
+                button.onclick = () => selectAnswer(index);
+                optionsContainer.appendChild(button);
+            });
+            
+            document.getElementById('feedback').classList.add('hidden');
+            document.getElementById('next-btn').classList.add('hidden');
+            answered = false;
+        }
+
+        function selectAnswer(selectedIndex) {
+            if (answered) return;
+            
+            answered = true;
+            const question = questions[currentQuestion];
+            const options = document.querySelectorAll('.quiz-option');
+            
+            options.forEach((option, index) => {
+                if (index === question.correct) {
+                    option.classList.add('correct');
+                } else if (index === selectedIndex && index !== question.correct) {
+                    option.classList.add('incorrect');
+                }
+                option.style.pointerEvents = 'none';
+            });
+            
+            const feedback = document.getElementById('feedback');
+            const feedbackText = document.getElementById('feedback-text');
+            const explanation = document.getElementById('explanation');
+            
+            if (selectedIndex === question.correct) {
+                score++;
+                feedback.className = 'mt-6 p-4 rounded-lg bg-green-100 border-2 border-green-300 fade-in';
+                feedbackText.textContent = '🎉 ถูกต้อง!';
+                feedbackText.className = 'font-semibold text-green-700';
+            } else {
+                feedback.className = 'mt-6 p-4 rounded-lg bg-red-100 border-2 border-red-300 fade-in';
+                feedbackText.textContent = '❌ ไม่ถูกต้อง';
+                feedbackText.className = 'font-semibold text-red-700';
+            }
+            
+            explanation.textContent = question.explanation;
+            explanation.className = 'mt-2 text-sm text-gray-700';
+            feedback.classList.remove('hidden');
+            
+            document.getElementById('score').textContent = score;
+            document.getElementById('next-btn').classList.remove('hidden');
+        }
+
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            document.getElementById('question-container').classList.add('hidden');
+            document.getElementById('results').classList.remove('hidden');
+            
+            const finalScore = document.getElementById('final-score');
+            const performanceMessage = document.getElementById('performance-message');
+            
+            finalScore.textContent = score;
+            
+            if (score === 5) {
+                performanceMessage.textContent = 'ยอดเยี่ยม! คุณเข้าใจเรื่องเพศศึกษาเป็นอย่างดี! 🌟';
+            } else if (score >= 3) {
+                performanceMessage.textContent = 'ดีมาก! คุณมีความรู้พื้นฐานที่ดี ลองอ่านเนื้อหาเพิ่มเติม 👍';
+            } else {
+                performanceMessage.textContent = 'ลองอ่านเนื้อหาอีกครั้งแล้วมาทำแบบทดสอบใหม่นะ 📚';
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            answered = false;
+            document.getElementById('question-container').classList.remove('hidden');
+            document.getElementById('results').classList.add('hidden');
+            loadQuestion();
+        }
+
+        // Event listeners
+        document.getElementById('next-btn').onclick = nextQuestion;
+
+        // Initialize
+        showSection('content');
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98b27c10f76d7335',t:'MTc1OTg5MzQ0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
